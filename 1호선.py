@@ -6,7 +6,7 @@ df = pd.read_csv(csv_file, header=None, encoding='UTF-8')
 
 # 헤더 추가
 df.columns = [
-    '호선', '역명', '상세위치', '소형(개수)', '중형(개수)', '대형(개수)', '특대형(개수)', '이용요금', '운영사'
+    '연번', '역명', '상세위치', '소형(개수)', '중형(개수)', '대형(개수)', '특대형(개수)', '이용요금', '운영사'
 ]
 # HTML 테이블로 변환
 html_table = df.to_html(index=False)
