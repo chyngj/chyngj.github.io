@@ -5,16 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>부산 지하철 노선별 물품보관함 정보</title>
     <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+
         .title {
-            text-align: center;  /* 텍스트 가운데 정렬 */
+            text-align: center;
             font-weight: bold;
-            font-size: 250%;     /* 폰트 크기 */
-            margin-top: 20px;    /* 상단 여백 */
-            margin-bottom: 20px; /* 하단 여백 */
+            font-size: 250%;
+            margin-top: 20px;  /* 제목 상단 여백 */
+            margin-bottom: 40px; /* 제목 하단 여백 */
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* 버튼 간격 */
+            margin-top: 100px; /* 버튼 위치를 제목 아래로 약간 내림 */
+        }
+
+        .button-container button {
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button-container button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-<h1 class="title">부산 지하철 노선별 물품보관함 정보</h1> 
+
+<h1 class="title">부산 지하철 노선별 물품보관함 정보</h1>
+
+<div class="button-container">
+    <button onclick="window.location.href='detail1.html'">1호선 물품보관함 정보</button>
+    <button onclick="window.location.href='detail2.html'">2호선 물품보관함 정보</button>
+    <button onclick="window.location.href='detail3.html'">3호선 물품보관함 정보</button>
+    <button onclick="window.location.href='detail4.html'">4호선 물품보관함 정보</button>
+</div>
+
 </body>
 </html>
