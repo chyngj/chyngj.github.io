@@ -2,7 +2,7 @@ import pandas as pd
 # CSV 파일 경로
 csv_file = '1_data.csv'
 # CSV 파일 읽기
-df = pd.read_csv(csv_file, header=None, encoding='UTF-8')
+df = pd.read_csv(csv_file, header=None,)
 
 # 헤더 추가
 df.columns = [
