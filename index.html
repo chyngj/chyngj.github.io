@@ -15,7 +15,7 @@
         .button-container {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 12px; /* 버튼 간의 간격 조정 */
             margin-bottom: 20px;
         }
         .button {
@@ -23,12 +23,11 @@
             border: none;
             border-radius: 5px;
             color: white;
-            padding: 15px 25px;
+            padding: 18px 30px; /* 버튼 크기 조정 */
             text-align: center;
             text-decoration: none;
-            display: inline-block;
-            font-size: 18px;
-            margin: 4px 2px;
+            display: block;
+            font-size: 21px; /* 버튼 텍스트 크기 조정 */
             cursor: pointer;
         }
         .button1 { background-color: #F06A00; }
@@ -49,6 +48,16 @@
         }
         th {
             background-color: #F4F4F4;
+        }
+        .image-container {
+            text-align: center; /* 이미지 중앙 정렬 */
+            margin-top: 12px; /* 이미지와 버튼 간격 조정 */
+        }
+        .image-container img {
+            max-width: 450px; /* 이미지의 최대 너비 조정 */
+            height: auto; /* 이미지 비율 유지 */
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -95,12 +104,32 @@
         </tbody>
     </table>
 
-    <!-- 버튼 삽입 -->
+    <!-- 버튼 및 이미지 삽입 -->
     <div class="button-container">
-        <a href="http://127.0.0.1:5500/1호선.html" class="button button1">부산 도시철도 1호선</a>
-        <a href="http://127.0.0.1:5500/2호선.html" class="button button2">부산 도시철도 2호선</a>
-        <a href="http://127.0.0.1:5500/3호선.html" class="button button3">부산 도시철도 3호선</a>
-        <a href="http://127.0.0.1:5500/4호선.html" class="button button4">부산 도시철도 4호선</a>
+        <div>
+            <a href="http://127.0.0.1:5500/1호선.html" class="button button1">부산 도시철도 1호선</a>
+            <div class="image-container">
+                <img src="1호선.jpg" alt="부산 도시철도 1호선">
+            </div>
+        </div>
+        <div>
+            <a href="http://127.0.0.1:5500/2호선.html" class="button button2">부산 도시철도 2호선</a>
+            <div class="image-container">
+                <img src="2호선.jpg" alt="부산 도시철도 2호선">
+            </div>
+        </div>
+        <div>
+            <a href="http://127.0.0.1:5500/3호선.html" class="button button3">부산 도시철도 3호선</a>
+            <div class="image-container">
+                <img src="3호선.jpg" alt="부산 도시철도 3호선">
+            </div>
+        </div>
+        <div>
+            <a href="http://127.0.0.1:5500/4호선.html" class="button button4">부산 도시철도 4호선</a>
+            <div class="image-container">
+                <img src="4호선.jpg" alt="부산 도시철도 4호선">
+            </div>
+        </div>
     </div>
 </body>
 </html>
