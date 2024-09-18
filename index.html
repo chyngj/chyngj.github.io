@@ -1,58 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>부산 지하철 노선별 물품보관함 정보</title>
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-        }
-
         .title {
             text-align: center;
             font-weight: bold;
             font-size: 250%;
-            margin-top: 20px;  /* 제목 상단 여백 */
-            margin-bottom: 40px; /* 제목 하단 여백 */
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
-
         .button-container {
             display: flex;
             justify-content: center;
-            gap: 20px; /* 버튼 간격 */
-            margin-top: 100px; /* 버튼 위치를 제목 아래로 약간 내림 */
+            gap: 12px; /* 버튼 간의 간격 조정 */
+            margin-bottom: 20px;
         }
-
-        .button-container button {
-            font-size: 18px;
-            padding: 10px 20px;
-            cursor: pointer;
-            background-color: #4CAF50;
-            color: white;
+        .button {
+            background-color: #f0f0f0;
             border: none;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            color: white;
+            padding: 18px 30px; /* 버튼 크기 조정 */
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 21px; /* 버튼 텍스트 크기 조정 */
+            cursor: pointer;
         }
-
-        .button-container button:hover {
-            background-color: #45a049;
+        .button1 { background-color: #F06A00; }
+        .button2 { background-color: #81BF48; }
+        .button3 { background-color: #BB8C00; }
+        .button4 { background-color: #217DCB; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #000;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #F4F4F4;
+        }
+        .image-container {
+            text-align: center; /* 이미지 중앙 정렬 */
+            margin-top: 12px; /* 이미지와 버튼 간격 조정 */
+        }
+        .image-container img {
+            max-width: 450px; /* 이미지의 최대 너비 조정 */
+            height: auto; /* 이미지 비율 유지 */
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
+    <h1 class="title">부산 지하철 노선별 물품보관함 정보</h1>
 
-<h1 class="title">부산 지하철 노선별 물품보관함 정보</h1>
+    <!-- 표 삽입 -->
+    <table>
+        <thead>
+            <tr>
+                <th>호선</th>
+                <th>고객센터</th>
+                <th>소</th>
+                <th>중</th>
+                <th>대</th>
+                <th>특대</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1호선</td>
+                <td>051-441-2100</td>
+                <td>37×27×55</td>
+                <td>42×30×55</td>
+                <td>37×57×55</td>
+                <td>37×87×55</td>
+            </tr>
+            <tr>
+                <td>2호선</td>
+                <td>02-2282-1443</td>
+                <td>37×37×55</td>
+                <td>-</td>
+                <td>42×60×55</td>
+                <td>42×90×55</td>
+            </tr>
+            <tr>
+                <td>3,4호선</td>
+                <td>070-8770-4282</td>
+                <td>42×36×60</td>
+                <td>-</td>
+                <td>42×60×60</td>
+                <td>42×90×60</td>
+            </tr>
+        </tbody>
+    </table>
 
-<div class="button-container">
-    <button onclick="window.location.href='detail1.html'">1호선 물품보관함 정보</button>
-    <button onclick="window.location.href='detail2.html'">2호선 물품보관함 정보</button>
-    <button onclick="window.location.href='detail3.html'">3호선 물품보관함 정보</button>
-    <button onclick="window.location.href='detail4.html'">4호선 물품보관함 정보</button>
-</div>
-
+    <!-- 버튼 및 이미지 삽입 -->
+    <div class="button-container">
+        <div>
+            <a href="http://127.0.0.1:5500/1호선.html" class="button button1">부산 도시철도 1호선</a>
+            <div class="image-container">
+                <img src="1호선.jpg" alt="부산 도시철도 1호선">
+            </div>
+        </div>
+        <div>
+            <a href="http://127.0.0.1:5500/2호선.html" class="button button2">부산 도시철도 2호선</a>
+            <div class="image-container">
+                <img src="2호선.jpg" alt="부산 도시철도 2호선">
+            </div>
+        </div>
+        <div>
+            <a href="http://127.0.0.1:5500/3호선.html" class="button button3">부산 도시철도 3호선</a>
+            <div class="image-container">
+                <img src="3호선.jpg" alt="부산 도시철도 3호선">
+            </div>
+        </div>
+        <div>
+            <a href="http://127.0.0.1:5500/4호선.html" class="button button4">부산 도시철도 4호선</a>
+            <div class="image-container">
+                <img src="4호선.jpg" alt="부산 도시철도 4호선">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
